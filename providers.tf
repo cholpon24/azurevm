@@ -31,7 +31,7 @@ terraform {
   backend "azurerm" {
     resource_group_name  = "kopicloud-tstate-rg"
     storage_account_name = "kopicloudtfstate12770"
-    container_name       = "core-tfstate"
+    container_name       = "tfstate"
     key                  = "actions.tfstate"
   }
   required_providers {
