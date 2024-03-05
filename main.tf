@@ -82,8 +82,10 @@ resource "random_id" "random_id" {
 
 # Create storage account for boot diagnostics
 resource "azurerm_storage_account" "my_storage_account" {
-  name                     = "diag${random_id.random_id.hex}"
-  location                 = azurerm_resource_group.rg.location
+  # name                     = "diag${random_id.random_id.hex}"
+  name                     = "kopicloudtfstate12770"
+  # location                 = azurerm_resource_group.rg.location
+   location = "westeurope"
   resource_group_name      = azurerm_resource_group.rg.name
   account_tier             = "Standard"
   account_replication_type = "LRS"
