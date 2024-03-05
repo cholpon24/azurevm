@@ -39,6 +39,10 @@ terraform {
       version = "~>3.2"
       source  = "hashicorp/azurerm"
     }
+     azapi = {
+      source  = "azure/azapi"
+      version = "~>1.5"
+    }
   }
 }
 # Configure the Azure provider
