@@ -30,7 +30,7 @@ terraform {
   required_version = ">= 1.3"
   backend "azurerm" {
     resource_group_name  = "kopicloud-tfstate-rg"
-    storage_account_name = "kopicloudiactest"
+    storage_account_name = "kopicloudiactest1"
     container_name       = "core-tfstate"
     key                  = "actions.tfstate"
   }
