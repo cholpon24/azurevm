@@ -82,7 +82,7 @@ jobs:
     - name: Terraform Init
       run: terraform init
       env:
-        ARM_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+        AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
         # ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         # ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         # ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
@@ -96,7 +96,7 @@ jobs:
     - name: Terraform Plan
       run: terraform plan -input=false
       env:
-        ARM_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+        AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
         # ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         # ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         # ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
@@ -109,7 +109,7 @@ jobs:
       if: github.ref == 'refs/heads/"main"' && github.event_name == 'push'
       run: terraform apply -auto-approve -input=false
       env:
-        ARM_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+        AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
         # ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
         # ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
         # ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
