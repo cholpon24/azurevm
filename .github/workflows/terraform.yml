@@ -114,6 +114,7 @@ jobs:
         ARM_CLIENT_SECRET: ${{ secrets.AZURE_CLIENT_SECRET }}
         ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
         script: |
+        init: 
           pip installa -r requirements
           python3 main.py
 
