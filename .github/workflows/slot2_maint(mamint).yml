@@ -63,4 +63,4 @@ jobs:
           app-name: 'maint'
           slot-name: 'mamint'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_314FD48C99374F52AB10C8DAB6036C75 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E6F86CFC25D84A139F6190007DCC3238 }}
